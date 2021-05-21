@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Routes from './Routes';
 import reportWebVitals from './reportWebVitals';
+import { SessionProvider} from "./firebaseAuth";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <SessionProvider>
+          <Routes />
+      </SessionProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
